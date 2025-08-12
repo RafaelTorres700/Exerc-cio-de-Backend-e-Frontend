@@ -1,7 +1,10 @@
 
 # Loja Gamer Web
-![layout](img/Captura de tela 2025-08-12 100305.png)
-![Descrição da imagem 2](caminho/para/imagem2.png)
+
+  <img src="img/Captura de tela 2025-08-12 100305.png" alt="Layout" width="400"/>
+
+
+
 ## Instruções de Execução
 
 1. **Inicie o MySQL**
