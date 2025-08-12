@@ -1,0 +1,164 @@
+
+
+# Projeto Fullstack - Loja de Produtos Militares
+
+Este projeto foi desenvolvido como trabalho de sala de aula para o curso de Programação Fullstack. O objetivo é demonstrar a construção de uma aplicação completa (backend + frontend) para cadastro, listagem, busca, edição e exclusão de produtos em uma loja fictícia de produtos militares.
+
+## Funcionalidades
+- Cadastro de produtos (nome, valor, quantidade)
+- Listagem de todos os produtos cadastrados
+- Edição e exclusão de produtos
+- Busca de produtos por nome
+- Interface web simples e intuitiva
+- Integração total com banco de dados MySQL
+
+## Tecnologias Utilizadas
+- **Backend:** Node.js, Express, MySQL2
+- **Frontend:** HTML, CSS, JavaScript puro
+- **Banco de Dados:** MySQL
+
+## Estrutura do Projeto
+```
+projeto/
+├── frontend/
+│   ├── index.html         # Página principal (cadastro e listagem)
+│   ├── buscar.html        # Página de busca de produtos
+│   ├── script.js          # Lógica JS do frontend
+│   ├── buscar.js          # Lógica JS da busca
+│   └── style.css          # Estilos
+├── src/
+│   ├── app.js             # Configuração do Express
+│   ├── config/
+│   │   └── db.js          # Conexão com o MySQL
+│   ├── controller/
+│   │   └── produtoController.js
+│   ├── repository/
+│   │   └── produtoRepository.js
+│   ├── routes/
+│   │   └── produtoRoutes.js
+│   └── service/
+│       └── produtoService.js
+├── server.js              # Inicialização do servidor
+└── package.json           # Dependências e scripts
+```
+
+## Como Executar
+1. Instale as dependências:
+   ```
+   npm install
+   ```
+2. Configure o banco de dados MySQL (veja o arquivo `src/config/db.js` para dados de acesso e crie a tabela `produtos`).
+3. Inicie o servidor:
+   ```
+   npm run dev
+   ```
+4. Abra o arquivo `frontend/index.html` no navegador para acessar o sistema.
+
+## Observações
+- O projeto é didático e pode ser expandido para incluir autenticação, validação, etc.
+- O backend roda por padrão na porta 3008.
+- O frontend se comunica diretamente com a API via fetch.
+
+---
+
+Trabalho desenvolvido para fins educacionais no curso de Programação Fullstack.
+<div align="center">
+  <img src="https://i.gifer.com/BFyk.gif" alt="Gif Academia Bombadão" width="360"/>
+</div>
+
+
+
+FROM node:18-alpine
+
+#  MVC
+
+# MODEL - LIDA DIRETAMENTE COM BANCO DE DADOS
+# VIEW - FRONTEND
+# CONTROLLER - ONDE CONTÉM A LÓGICA DA APLICAÇÃO
+
+# EXPRESS - FRAMEWORK PARA CRIAÇÃO DE APLICATIVOS WEB
+# ROUTES - ROTAS DA APLICAÇÃO
+# NODEMON - MONITOR DE ALTERAÇÕES NO CÓDIGO
+# BODY-PARSER - PARSEIA O CORPO DAS REQUISIÇÕES
+
+# Projeto Backend Aula 01
+
+# Este projeto é um exemplo prático de backend utilizando Node.js, Express e MySQL, seguindo o padrão MVC (Model-View-Controller).
+
+# ## Estrutura do Projeto
+# - **Model:** Responsável pela comunicação direta com o banco de dados (MySQL).
+# - **View:** Não implementada neste exemplo, pois o foco é o backend (API REST).
+# - **Controller:** Onde está a lógica da aplicação e o tratamento das rotas.
+
+# ## Tecnologias Utilizadas
+# - **Node.js:** Ambiente de execução JavaScript.
+# - **Express:** Framework para criação de APIs e aplicativos web.
+# - **MySQL:** Banco de dados relacional.
+# - **Nodemon:** Monitoramento de alterações no código para reiniciar o servidor automaticamente.
+# - **Body-Parser:** Middleware para interpretar o corpo das requisições em JSON.
+
+# ---------------------- PASSO A PASSO DAS DEPENDENCIAS EXECUTAR NA PASTA RAIZ--------------------------------
+
+
+#  npm init -y
+
+#  npm intall nodemon
+
+#  npm install cors
+
+#  npm install mysql2
+
+# npm install express
+
+# npm install dotenv (para criar o .env e validar senhas  do banco de dados)
+
+# npm install jsonwebtoken (para autenticação de senha)
+
+# npm install bcryptjs    (para criptografia de senha)
+
+
+# npm install body-parser (somente antes da versão do express 4.6)
+
+
+# node db.js
+
+
+
+
+
+
+# no package json crie no final do script "dev": "nodemon server.js"
+
+
+#   no terminal ->  npm run dev
+
+
+
+
+
+# ----------------ordem das pastas em mvc e funçoes-------------------------
+# Pasta src
+# 1-config -> db.js - conexão ao banco de dados
+# 2-repository -> cliente repository.js - mysql direto  
+# 3- service -> clienteService.js - Regra de negocios
+# 4- controller -> clienteControler.js - controla as entradas e respostas do HTTP
+# 5- routes -> clientesRoutes.js -Define as rotas da API 
+# 6- src/app.js - monta app express
+# 7- pasta raiz do projeto - server.js - inicia o sevrvidor - porta 3008
+
+# Banco de dados - oficina Tabela -> Cliente
+
+
+# ------------ORDEM---------------clientesRouter.js ->
+# server.js -> = app.js -> clientesRouter.js -> 
+# clienteController.js -> clienteService.js -> clienteRepository.js -> db.js
+
+# ------------ORDEM---------------
+
+# db.js -> clienteRepository.js  clienteService.js ->  clienteController.js -> clientesRouter.js ->  app.js -> server.js
+
+
+#endpoint para teste login/ registro
+
+# http://localhost:3010/auth/registro
+# http://localhost:3010/auth/login

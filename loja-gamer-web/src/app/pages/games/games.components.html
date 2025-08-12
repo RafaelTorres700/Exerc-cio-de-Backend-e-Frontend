@@ -1,0 +1,20 @@
+<div class="games-container">
+  <form class="games-form" (ngSubmit)="salvar()">
+    <input class="games-input" [(ngModel)]="game.nome" name="nome" placeholder="Nome" required />
+    <input class="games-input" [(ngModel)]="game.tipo" name="tipo" placeholder="Tipo" required />
+    <input class="games-input" [(ngModel)]="game.ano" name="ano" type="number" placeholder="Ano" required />
+    <button class="games-btn" type="submit">{{ editando ? 'Atualizar' : 'Adicionar' }}</button>
+    <button class="games-btn games-btn-cancel" type="button"
+    (click)="game = {nome: '', tipo: '', ano: 0}; editando = false;"
+    *ngIf="editando">Cancelar</button>
+  </form>
+  <ul class="games-list">
+    <li class="games-item" *ngFor="let g of games">
+      <span>{{g.nome}} || {{g.tipo}} || {{g.ano}}</span>
+      <span>
+        <button class="games-btn" (click)="editar(g)">Editar</button>
+        <button class="games-btn games-btn-cancel" (click)="excluir(g.id!)">Excluir</button>
+      </span>
+    </li>
+  </ul>
+</div>
