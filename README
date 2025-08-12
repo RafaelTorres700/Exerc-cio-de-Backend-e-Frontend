@@ -1,8 +1,6 @@
 
 # Loja Gamer Web
 
-![Layout](img/captura-tela-2025-08-12-100305.png)
-
 
 ## Instruções de Execução
 
@@ -18,7 +16,7 @@
      ```
    - Inicie o servidor backend:
      ```
-     npm start
+     npm run dev
      ```
    - O backend ficará disponível em `http://localhost:3024`.
 
@@ -40,4 +38,9 @@
 
 ## Perfil Profissional e Competências
 
-Esta atividade demonstra competências essenciais para o perfil de desenvolvedor full stack, incluindo integração de frontend Angular com backend Node.js, consumo de APIs REST, manipulação de banco de dados relacional (MySQL), aplicação de boas práticas de código, tratamento de erros e documentação. O projeto evidencia capacidade de estruturar aplicações web modernas, seguindo padrões do mercado e promovendo manutenibilidade e escalabilidade.
+Esta atividade demonstra competências essenciais para o perfil de desenvolvedor full stack,
+ incluindo integração de frontend Angular com backend Node.js, 
+ consumo de APIs REST, manipulação de banco de dados relacional (MySQL), 
+ aplicação de boas práticas de código, tratamento de erros e documentação. 
+ O projeto evidencia capacidade de estruturar aplicações web modernas, 
+ seguindo padrões do mercado e promovendo manutenibilidade e escalabilidade.
